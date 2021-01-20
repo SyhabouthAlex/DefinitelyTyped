@@ -196,35 +196,6 @@ declare module fhir {
         email: string;
     }
     /**
-     * Information about an laboratory providing lab services
-     */
-    interface Laboratory {
-        /**
-         * An identifier for this laboratory
-         */
-        identifier?: id;
-        /**
-         * Whether this laboratory's record is in active use
-         */
-        active?: boolean;
-        /**
-         * A name associated with the laboratory
-         */
-        name: string;
-        /**
-         * A phone number for the laboratory
-         */
-        phone: string;
-        /**
-         * A email for the laboratory
-         */
-        email: string;
-        /**
-         * Location related to the laboratory
-         */
-        location: Location;
-    }
-    /**
      * Information about an medical technician providing health care services
      */
     interface MedTech {
