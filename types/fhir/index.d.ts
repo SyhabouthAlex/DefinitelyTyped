@@ -63,10 +63,6 @@ declare module fhir {
      */
     type ServiceArea = 'north-bay' | 'south-bay' | 'los-angeles';
     /**
-     * Codes identifying the stage lifecycle stage of a request
-     */
-    type RequestStatus = 'draft' | 'active' | 'suspended' | 'cancelled' | 'completed' | 'entered-in-error' | 'unknown';
-    /**
      * Time range defined by start and end date/time
      */
     interface Period {
@@ -119,19 +115,6 @@ declare module fhir {
          * Country (e.g. can be ISO 3166 2 or 3 letter code)
          */
         country: string;
-    }
-    /**
-     * A measured or measurable amount
-     */
-    interface Quantity {
-        /**
-         * Numerical value (with implicit precision)
-         */
-        value?: decimal;
-        /**
-         * Unit representation
-         */
-        unit?: string;
     }
     /**
      * The absolute geographic location
@@ -189,11 +172,11 @@ declare module fhir {
         /**
          * Phone number
          */
-        phone: string;
+        phone?: string;
         /**
          * Email
          */
-        email: string;
+        email?: string;
     }
     /**
      * Information about an medical technician providing health care services
